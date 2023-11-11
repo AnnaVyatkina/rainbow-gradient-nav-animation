@@ -1,0 +1,58 @@
+body {
+    background-image: radial-gradient(farthest-corner circle at 0% 0%, #ff8bbf 0%, 20%, #fbc7cc 0% 0%, 45%, #f9da8f 0% 0%, 60%, #85dab1 0% 0%, 80%, #49c8cb 0% 0%);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Quicksand';
+    background-attachment: fixed;
+}
+
+html {
+    height: 100%;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    font-size: 24px;
+    position: absolute;
+    top: 400px;
+    left: 340px;
+}
+
+.nav,
+.nav0 {
+    color: #000;
+    text-decoration: none;
+    padding: 35px;
+    transition: all 1s ease;
+    position: relative;
+}
+
+.nav:hover {
+    text-shadow:
+        1px 1px 0 #000,
+        1px 1px 0 #000,
+        1px 1px 0 #000,
+        1px 1px 0 #000;
+    transition: all 1s;
+}
+
+.nav::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: #000;
+    transform-origin: bottom;
+    transform: scaleX(0);
+    transition: transform 1s ease;
+}
+
+.nav:hover::before {
+    transform: scaleX(1);
+}
